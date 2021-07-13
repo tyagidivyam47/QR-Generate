@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#adad78">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            tools:text="URL"
+            android:layout_margin="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp"
+            android:textSize="26dp"
+            tools:background="@color/teal_200"/>
+
+        <FrameLayout
+            android:id="@+id/fl_QRcode"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp">
+
+            <TextView
+                android:id="@+id/textover_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Your Code will appear here."
+                android:textAlignment="center"
+                android:elevation="1dp"
+                android:padding="4dp"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/image_QRcode"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/white"/>
+
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl_QRcode"
+            android:layout_margin="20dp"
+            android:padding="5dp"
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white"/>
+
+        <Button
+            android:id="@+id/build_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input"
+            android:layout_margin="20dp"
+            android:textSize="25sp"
+            android:background="@drawable/button_back"
+            android:text="Build"/>
+
+        <TextView
+            android:id="@+id/swipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/build_button"
+            android:text="Swipe for more options ->"/>
+
+    </RelativeLayout>
+</ScrollView>
